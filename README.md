@@ -45,9 +45,9 @@ cd lw_fargate_ecs_demo
 cd terraform
 ```
   
-Next, create yourself a `terraform.tfvars` file with the following:  
- - node_counter: Is the number of demo VM's you need   
- - lw_token: Is the Lacework Agent Token  
+Next, create yourself a `terraform.tfvars` file with the following:   
+ - lw_token: Is the Lacework Agent Token.  
+ - app_image: Is the name of the ECR (or other registry) image.  
   
 Here is an example `tfvars` file:  
 ```bash
@@ -85,5 +85,5 @@ terraform apply -auto-approve
 ```
   
 ### Apply Complete !
-Once the run is complete you will get a list of the `server_ip` addresses.  
+Once the run is complete you will get a list of the `alb_hostname` addresses.  
   
