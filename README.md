@@ -5,7 +5,7 @@ Terraform to deploy an AWS Fargate ECS Cluster and configure the Lacework Agent.
   
 The terraform also creates an ECS Fargate `Task Definition` to deploy the LW Agent as a sidecar using a volume map approach and sets up the IAM policy to deploy the main app from AWS ECR container registry.  
   
-Currently the terraform runs on version `0.12.24` so you may wish to use [TFSwitch](https://github.com/warrensbox/terraform-switcher) to manage your different terraform versions easily !  
+Currently the terraform runs on version `1.0.9` so you may wish to use [TFSwitch](https://github.com/warrensbox/terraform-switcher) to manage your different terraform versions easily !  
   
 ### Lacework Polygraph
 Once you have your ECS Container deployed, the LW sidecar will send all the details to the UI.  It will look like this.  

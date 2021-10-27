@@ -1,5 +1,5 @@
 resource "aws_iam_role" "ExecutionRole" {
-  name = "reesy-ecsExecutionRole"
+  name = "${var.userid}-ecsExecutionRole"
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
@@ -15,7 +15,7 @@ resource "aws_iam_role" "ExecutionRole" {
   })
 
   tags = {
-    Name      = "reesy-ecsExecutionRole"
+    Name      = "${var.userid}-ecsExecutionRole"
     Terraform = "true"
   }
 }
