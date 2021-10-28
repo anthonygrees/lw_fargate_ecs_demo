@@ -52,3 +52,12 @@ variable "fargate_container_memory" {
 
 variable "lw_token" {
 }
+
+variable "lw_serverurl" {
+  default = "https://api.lacework.net"
+}
+
+variable "cw-log-group" {
+  description = "Cloudwatch log group to log to"
+  default = "/ecs/datacollector-sidecar-demo"
+}

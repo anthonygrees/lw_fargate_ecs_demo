@@ -181,9 +181,9 @@ resource "aws_ecs_task_definition" "app" {
   	"logConfiguration": {
   		"logDriver": "awslogs",
   		"options": {
-  			"awslogs-group": "/ecs/datacollector-sidecar-demo",
+  			"awslogs-group": "${var.cw-log-group}-${var.userid}",
   			"awslogs-region": "${var.aws_region}",
-  			"awslogs-stream-prefix": "${var.userid}-ecs"
+  			"awslogs-stream-prefix": "ecs"
   		}
   	}
   },
@@ -211,6 +211,10 @@ resource "aws_ecs_task_definition" "app" {
       {
         "name": "LaceworkAccessToken",
         "value": "${var.lw_token}"
+      },
+      {
+        "name": "LaceworkServerUrl",
+        "value": "${var.lw_serverurl}"
       }
     ],
     "mountPoints": [],
@@ -229,14 +233,18 @@ resource "aws_ecs_task_definition" "app" {
     "logConfiguration": {
       "logDriver": "awslogs",
       "options": {
-        "awslogs-group": "/ecs/datacollector-sidecar-demo",
+        "awslogs-group": "${var.cw-log-group}-${var.userid}",
         "awslogs-region": "${var.aws_region}",
-        "awslogs-stream-prefix": "${var.userid}-ecs"
+        "awslogs-stream-prefix": "ecs"
       }
     }
   }
 ]
 DEFINITION
+}
+
+resource "aws_cloudwatch_log_group" "datacollector-sidecar-demo" {
+  name = "${var.cw-log-group}-${var.userid}"
 }
 
 resource "aws_ecs_service" "main" {
