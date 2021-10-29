@@ -1,5 +1,9 @@
 # Terraform Lacework AWS Fargate ECS Cluster demo
   
+[![HIPAA](https://app.soluble.cloud/api/v1/public/badges/78a155b8-847b-4917-9746-ecfed2095bfb.svg)](https://app.soluble.cloud/repos/details/github.com/anthonygrees/lw_fargate_ecs_demo)
+[![CIS](https://app.soluble.cloud/api/v1/public/badges/78f4672a-8778-4bb6-a2ea-1b2fe5aa476d.svg)](https://app.soluble.cloud/repos/details/github.com/anthonygrees/lw_fargate_ecs_demo)
+[![IaC](https://app.soluble.cloud/api/v1/public/badges/c4bbb3d5-6847-45b9-87e2-cf32c87e4edd.svg)](https://app.soluble.cloud/repos/details/github.com/anthonygrees/lw_fargate_ecs_demo)
+  
 ### About
 Terraform to deploy an AWS Fargate ECS Cluster and configure the Lacework Agent.  
   
