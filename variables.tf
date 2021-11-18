@@ -1,6 +1,10 @@
 variable "aws_profile" {
 }
 
+variable "userid" {
+  description = "The prefix for the AWS Resources"
+}
+
 variable "aws_region" {
   description = "The AWS region to create things in."
   default     = "ap-southeast-2"
@@ -23,7 +27,7 @@ variable "app_port" {
 
 variable "app_count" {
   description = "Number of docker containers to run"
-  default     = 1
+  default     = 4
 }
 
 variable "fargate_task_cpu" {
@@ -47,4 +51,13 @@ variable "fargate_container_memory" {
 }
 
 variable "lw_token" {
+}
+
+variable "lw_serverurl" {
+  default = "https://api.lacework.net"
+}
+
+variable "cw-log-group" {
+  description = "Cloudwatch log group to log to"
+  default = "/ecs/datacollector-sidecar-demo"
 }
