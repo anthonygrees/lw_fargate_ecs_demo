@@ -89,3 +89,10 @@ terraform apply -auto-approve
 ### Apply Complete !
 Once the run is complete you will get a list of the `alb_hostname` addresses.  
   
+  
+### Helpful Links. 
+  
+1. [Jeff's Readme and Minimal Sidecar Example](https://github.com/jvogt/lacework-minimal-sidecar)
+2. [Non Root Access](https://github.com/jvogt/lacework-minimal-sidecar#running-as-a-non-root-user)
+3. [LW Agent Sidecar Code](https://github.com/lacework/agent/blob/78cbb0fb227a6dffd3d001655114d4913d2fce17/install/sidecar/sidecar.sh.template)
+  
